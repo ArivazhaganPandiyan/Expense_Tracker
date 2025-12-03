@@ -63,24 +63,24 @@ https://expense-tracker-npgz.onrender.com
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/ArivazhaganPandiyan/Expense_Tracker.git
-cd Expense_Tracker
-cd backend
+-git clone https://github.com/ArivazhaganPandiyan/Expense_Tracker.git
+-cd Expense_Tracker
+-cd backend
 ## ⚙️ Environment Variables (Backend)
 
-Create a `.env` file inside **backend**:
+-Create a `.env` file inside **backend**:
 
 MONGO_URL=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 PORT=5000
 2️⃣ Run Backend
-cd backend
-npm install
-npm start
+-cd backend
+-npm install
+-npm start
 3️⃣ Run Frontend
-cd frontend
-npm install
-npm run dev
+-cd frontend
+-npm install
+-npm run dev
 
 🖼 Screenshots
 <img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/5aee5678-5bdb-4ccc-b676-eacc1fd786ee" />
