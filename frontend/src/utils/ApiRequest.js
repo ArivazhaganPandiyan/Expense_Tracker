@@ -1,4 +1,4 @@
-const host = "http://localhost:3000";
+const host = "https://expense-tracker-npgz.onrender.com";
 export const setAvatarAPI = `${host}/api/auth/setAvatar`;
 export const registerAPI = `${host}/api/auth/register`;
 export const loginAPI = `${host}/api/auth/login`;

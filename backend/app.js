@@ -1,61 +1,92 @@
 import express from "express";
-import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
-import path from "path";
 
 import { connectDB } from "./DB/Database.js";
 import transactionRoutes from "./Routers/Transactions.js";
 import userRoutes from "./Routers/userRouter.js";
 import adminRoute from "./Routers/adminRouter.js";
 
-// ✅ Load environment variables
+// Load env
 dotenv.config();
-
 const app = express();
-
-// ✅ Debug log to confirm env loaded
-console.log("Loaded MONGO_URL:", process.env.MONGO_URL);
-
 const port = process.env.PORT || 5000;
 
-// ✅ Connect Database
+console.log("Loaded MONGO_URL:", process.env.MONGO_URL);
+
+// Connect DB
 connectDB();
 
-// ✅ Allowed origins for CORS
+/* ============================================
+   ✅ CORS FIX — DYNAMIC ORIGIN CHECK
+=============================================== */
 const allowedOrigins = [
+  "http://localhost:3000",
   "http://localhost:3001",
-  // add more frontend URLs here (like Netlify or Vercel later)
+  // Add your Netlify/Vercel frontend URL here later
+  // "https://your-frontend.netlify.app"
 ];
 
-// ✅ Middleware
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+
+  // If no origin (e.g., mobile apps, postman), skip CORS check
+  if (!origin) return next();
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET,POST,PUT,DELETE,OPTIONS"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+
+    // Preflight request
+    if (req.method === "OPTIONS") {
+      return res.sendStatus(204);
+    }
+
+    return next();
+  } else {
+    console.warn("❌ BLOCKED ORIGIN:", origin);
+    return res.status(403).json({
+      success: false,
+      message: "CORS Error: This origin is not allowed",
+    });
+  }
+});
+
+/* ============================================
+   Middleware
+=============================================== */
 app.use(express.json());
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// ✅ Routes
+/* ============================================
+   Routes
+=============================================== */
 app.use("/api/v1", transactionRoutes);
 app.use("/api/auth", userRoutes);
 app.use("/api/admin", adminRoute);
 
-// ✅ Test route
+// Test Route
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-// ✅ Start server
+/* ============================================
+   Start Server
+=============================================== */
 app.listen(port, () => {
   console.log(`🚀 Server is listening on http://localhost:${port}`);
 });
