@@ -70,6 +70,9 @@ https://expense-tracker-npgz.onrender.com
 -git clone https://github.com/ArivazhaganPandiyan/Expense_Tracker.git
 -cd Expense_Tracker
 -cd backend
+
+---
+
 ## ⚙️ Environment Variables (Backend)
 
 -Create a `.env` file inside **backend**:
@@ -77,10 +80,16 @@ https://expense-tracker-npgz.onrender.com
 MONGO_URL=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 PORT=5000
+
+---
+
 2️⃣ Run Backend
 -cd backend
 -npm install
 -npm start
+
+---
+
 3️⃣ Run Frontend
 -cd frontend
 -npm install
