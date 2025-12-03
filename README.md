@@ -83,6 +83,8 @@ PORT=5000
 -npm run dev
 
 🖼 Screenshots
-<img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/5aee5678-5bdb-4ccc-b676-eacc1fd786ee" />
-<img width="1920" height="1080" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/5078ecd3-c4c8-4f89-80e0-2531cd9e32da" />
+🖼 Screenshots
+
+![Screenshot 1](./Screenshot/screenshot1.png)
+![Screenshot 2](./Screenshot/screenshot2.png)
 
