@@ -58,8 +58,6 @@ https://expense-tracker-npgz.onrender.com
 -Morgan – API request logging
 -Validator – Input validation
 
----
-
 ## ▶️ Running the App Locally
 
 ### 1️⃣ Clone the Repository
