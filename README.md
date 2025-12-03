@@ -1,147 +1,90 @@
-📊 Expense Tracker – MERN Stack Application
+# 📊 Expense Tracker – MERN Stack Application
 
-A full-stack Expense Management System built using the MERN stack (MongoDB, Express, React, Node.js).
-This app helps users manage expenses, income, categories, filters, analytics, and maintains secure authentication.
+A full-stack **Expense Management System** built using the **MERN stack (MongoDB, Express, React, Node.js)**.  
+This app helps users track income, expenses, categories, analytics, and manage their financial activity with secure authentication.
 
-🚀 Live Demo
+---
 
-Frontend (Netlify):
-🔗 https://expensemanagingapp.netlify.app
+## 🚀 Live Demo
 
-Backend (Render):
-🔗 https://expense-tracker-npgz.onrender.com
+### 🌐 Frontend (Netlify)
+https://expensemanagingapp.netlify.app
 
-📌 Features
-👤 User Features
+### 🖥 Backend (Render)
+https://expense-tracker-npgz.onrender.com
 
-Register & Login (JWT Auth)
+---
 
-Add, Edit, Delete transactions
+## 📌 Features
 
-View income & expenses
+### 👤 User Features
+- Register & Login (JWT Authentication)
+- Add, Edit, Delete transactions
+- Track both **Income & Expense**
+- Filter by:
+  - Date range  
+  - Category  
+  - Transaction Type  
+- Clean & responsive UI
+- Avatar  selection
+- Toast notifications for actions
 
-Filter by:
+## 🛠 Tech Stack
 
-Date range
+### **Frontend**
 
-Category
+-React (CRA)
+-React Router DOM – Client-side navigation
+-Axios – API requests
+-Bootstrap / React-Bootstrap – UI components & grid
+-Material UI (MUI) – Icons & components
+-custom css
+-React Hot Toast / React Toastify – Notifications
+-React Datepicker / React Date Range – Date selection
+-Moment.js – Date formatting
+-tsparticles / react-tsparticles – Background animations
+-Unique Names Generator – Random unique names
 
-Type (Income / Expense)
+### **Backend**
 
-Responsive UI Design
+-Express.js
+-MongoDB & Mongoose – Database & ODM
+-JWT (jsonwebtoken) – Authentication
+-Bcrypt – Password hashing
+-Cookie-Parser – Cookie handling
+-CORS – Cross-origin access
+-Dotenv – Environment variables
+-Helmet – Security headers
+-Morgan – API request logging
+-Validator – Input validation
 
-Avatar upload / selection
+---
 
-Real-time toast notifications
+## ▶️ Running the App Locally
 
-🛠 Admin Features
+### 1️⃣ Clone the Repository
 
-Admin login
+```bash
+git clone https://github.com/ArivazhaganPandiyan/Expense_Tracker.git
+cd Expense_Tracker
+cd backend
+## ⚙️ Environment Variables (Backend)
 
-View all users
-
-Manage all transactions
-
-Admin database control
-
-🛠 Tech Stack
-Frontend
-
-React
-
-React Router DOM
-
-Bootstrap / React-Bootstrap
-
-Axios
-
-Datepicker
-
-Toast notifications (React Hot Toast / React Toastify)
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB & Mongoose
-
-JWT Authentication
-
-Bcrypt
-
-Helmet
-
-Morgan
-
-📂 Project Structure
-Expense_Tracker/
-│
-├── backend/
-│   ├── DB/
-│   ├── Models/
-│   ├── Routers/
-│   ├── Controllers/
-│   ├── app.js
-│   ├── package.json
-│
-└── frontend/
-    ├── public/
-    ├── src/
-    ├── package.json
-
-⚙️ Environment Variables
-
-Create a .env file inside backend:
+Create a `.env` file inside **backend**:
 
 MONGO_URL=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 PORT=5000
-
-▶️ How to Run Locally
-1. Clone the Repository
-git clone https://github.com/ArivazhaganPandiyan/Expense_Tracker.git
-cd Expense_Tracker
-
-2. Install & Run Backend
+2️⃣ Run Backend
 cd backend
 npm install
 npm start
-
-
-Backend runs at:
-➡ http://localhost:5000
-
-3. Install & Run Frontend
+3️⃣ Run Frontend
 cd frontend
 npm install
-npm start
-
-
-Frontend runs at:
-➡ http://localhost:3000
-
-🌐 Deployment
-Netlify (Frontend)
-
-Build command:
-
-npm run build
-
-
-Deploy the build/ folder
-
-Render (Backend)
-
-Root Directory: backend
-
-Build Command: npm install
-
-Start Command: node app.js
-
-Auto-deploy enabled
+npm run dev
 
 🖼 Screenshots
+<img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/5aee5678-5bdb-4ccc-b676-eacc1fd786ee" />
+<img width="1920" height="1080" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/5078ecd3-c4c8-4f89-80e0-2531cd9e32da" />
 
-(Add your screenshots here)
