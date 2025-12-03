@@ -4,6 +4,10 @@ A full-stack **Expense Management System** built using the **MERN stack (MongoDB
 This app helps users track income, expenses, categories, analytics, and manage their financial activity with secure authentication.
 
 ---
+Screenshots
+
+![Screenshot 1](./screenshot/Screenshot1.png)
+![Screenshot 2](./screenshot/Screenshot2.png)
 
 ## 🚀 Live Demo
 
@@ -81,10 +85,3 @@ PORT=5000
 -cd frontend
 -npm install
 -npm run dev
-
-🖼 Screenshots
-
-![Screenshot 1](./screenshot/Screenshot1.png)
-![Screenshot 2](./screenshot/Screenshot2.png)
-
-
