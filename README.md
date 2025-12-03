@@ -83,8 +83,8 @@ PORT=5000
 -npm run dev
 
 🖼 Screenshots
-🖼 Screenshots
 
-![Screenshot 1](./Screenshot/screenshot1.png)
-![Screenshot 2](./Screenshot/screenshot2.png)
+![Screenshot 1](./screenshot/Screenshot1.png)
+![Screenshot 2](./screenshot/Screenshot2.png)
+
 
