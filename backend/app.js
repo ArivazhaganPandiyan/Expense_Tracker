@@ -25,6 +25,7 @@ connectDB();
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001",
+  "https://expensemanagingapp.netlify.app",
   // Add your Netlify/Vercel frontend URL here later
   // "https://your-frontend.netlify.app"
 ];
